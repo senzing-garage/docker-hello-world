@@ -43,3 +43,23 @@ docker build --tag senzing/hello-world https://github.com/senzing/docker-hello-w
       --env SLEEP_TIME=30 \
       senzing/hello-world
     ```
+
+## Push to hub.docker.com
+
+Add / Update docker images on [hub.docker.com/u/senzing](https://hub.docker.com/u/senzing).
+
+1. Push latest
+
+    ```console
+    sudo docker tag senzing/hello-world senzing/hello-world-on-hub-docker-com
+    sudo docker push senzing/hello-world-on-hub-docker-com
+    ```
+
+1. Push version
+
+    ```console
+    export DOCKER_VERSION=1.0.0
+
+    sudo docker tag senzing/hello-world senzing/hello-world-on-hub-docker-com:${DOCKER_VERSION}
+    sudo docker push senzing/hello-world-on-hub-docker-com:${DOCKER_VERSION}
+    ```
