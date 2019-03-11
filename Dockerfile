@@ -1,5 +1,5 @@
-ARG BASE_CONTAINER=alpine:latest
-FROM ${BASE_CONTAINER}
+ARG BASE_IMAGE=alpine:latest
+FROM ${BASE_IMAGE}
 
 RUN apk add --no-cache bash
 
