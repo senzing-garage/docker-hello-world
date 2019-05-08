@@ -17,7 +17,6 @@ trap 'handle_term' TERM
 echo "/app/sleep-infinitely.sh is sleeping infinitely."
 
 # Sleep in a manner that allows "docker stop ..." to shutdown gracefully.
-# 60 sec * 60 min * 24 hours * 365 days = 31536000 seconds
 
-sleep 31536000 &
+sleep infinity &
 wait
