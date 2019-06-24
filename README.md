@@ -22,47 +22,51 @@ It can be used to compare behavior of local docker registry/repository with Dock
    is not on DockerHub.
    It must be built locally.
 1. `senzing/hello-world-on-hub-docker-com`
-   is on Docker and will be pulled automatically.
+   is on [DockerHub](https://hub.docker.com/r/senzing/hello-world-on-hub-docker-com)
+   and will be pulled automatically.
 
 ### Contents
 
-1. [Create local docker image](#create-local-docker-image)
+1. [Build local docker image](#build-local-docker-image)
 1. [Run Docker container from local image](#run-docker-container-from-local-image)
 1. [Run Docker container from DockerHub image](#run-docker-container-from-dockerhub-image)
 
-## Create local docker image
+## Build local docker image
 
-```console
-sudo docker build \
-  --tag senzing/hello-world \
-  https://github.com/senzing/docker-hello-world.git
-```
+1. Build image.
+   Example:
+
+    ```console
+    sudo docker build \
+      --tag senzing/hello-world \
+      https://github.com/senzing/docker-hello-world.git
+    ```
 
 ## Run Docker container from local image
 
-1. Create the docker container.
+1. Run the docker container.
+   Example:
 
     ```console
     sudo docker run \
-      -it  \
       senzing/hello-world
     ```
 
-1. Create the docker container.
+1. Run the docker container with `SLEEP_TIME`.
+   Example:
 
     ```console
     sudo docker run \
-      -it  \
       --env SLEEP_TIME=30 \
       senzing/hello-world
     ```
 
 ## Run Docker container from DockerHub image
 
-1. Create the docker container.
+1. Run the docker container.
+   Example:
 
     ```console
     sudo docker run \
-      -it  \
       senzing/hello-world-on-hub-docker-com
     ```
