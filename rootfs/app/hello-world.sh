@@ -4,7 +4,8 @@
 
 handle_term()
 {
-   echo "signal received, hello-world exiting."
+   echo ""
+   echo "hello-world.sh exiting."
    exit 0
 }
 
