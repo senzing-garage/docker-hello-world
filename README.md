@@ -24,7 +24,9 @@ Docker-compose, Kubernetes, Rancher, etc.
 ## Create docker container
 
 ```console
-sudo docker build --tag senzing/hello-world https://github.com/senzing/docker-hello-world.git
+sudo docker build \
+  --tag senzing/hello-world \
+  https://github.com/senzing/docker-hello-world.git
 ```
 
 ## Run Docker container
@@ -32,14 +34,16 @@ sudo docker build --tag senzing/hello-world https://github.com/senzing/docker-he
 1. Create the docker container.
 
     ```console
-    sudo docker run -it  \
+    sudo docker run \
+      -it  \
       senzing/hello-world
     ```
 
 1. Create the docker container.
 
     ```console
-    sudo docker run -it  \
+    sudo docker run \
+      -it  \
       --env SLEEP_TIME=30 \
       senzing/hello-world
     ```
