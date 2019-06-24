@@ -12,8 +12,8 @@ Hello world at Day Mon dd hh:mm:ss UTC yyyy
  :
 ```
 
-to STDOUT at an interval defined by `SLEEP_TIME` in seconds.
-Default: 300 seconds (5 minutes).
+to STDOUT at an interval defined by `SENZING_SLEEP_TIME` in seconds.
+Default: 600 seconds (10 minutes).
 
 This minimal docker image is used for testing docker formations in products like
 Docker-compose, Kubernetes, Rancher, etc.
