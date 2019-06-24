@@ -4,7 +4,7 @@
 
 handle_term()
 {
-   echo "signal received, sleep-infinity exiting."
+   echo "signal received, hello-world exiting."
    exit 0
 }
 
@@ -14,13 +14,13 @@ trap 'handle_term' TERM
 # Main
 # =============================================================================
 
-echo "/app/alpine-sleep-infinitely.sh is sleeping infinitely."
+echo "Hello world at " $(date)
 
-# Sleep in a manner that allows "docker stop ..." to shutdown gracefully.
+# Sleep cycle in a manner that allows "docker stop ..." to shutdown gracefully.
 
-while sleep 3600;
+while sleep ${SLEEP_TIME:-300};
   do
-    echo $(date) - Still sleeping
+    echo "Hello world at" $(date)
   done &
 
 wait

@@ -16,12 +16,21 @@ Default: 300 seconds (5 minutes).
 This minimal docker image is used for testing docker formations in products like
 Docker-compose, Kubernetes, Rancher, etc.
 
+It can be used to compare behavior of local docker registry/repository with DockerHub.
+
+1. `senzing/hello-world`
+   is not on DockerHub.
+   It must be built locally.
+1. `senzing/hello-world-on-hub-docker-com`
+   is on Docker and will be pulled automatically.
+
 ### Contents
 
-1. [Create Docker container](#create-docker-container)
-1. [Run Docker container](#run-docker-container)
+1. [Create local docker image](#create-local-docker-image)
+1. [Run Docker container from local image](#run-docker-container-from-local-image)
+1. [Run Docker container from DockerHub image](#run-docker-container-from-dockerhub-image)
 
-## Create docker container
+## Create local docker image
 
 ```console
 sudo docker build \
@@ -29,7 +38,7 @@ sudo docker build \
   https://github.com/senzing/docker-hello-world.git
 ```
 
-## Run Docker container
+## Run Docker container from local image
 
 1. Create the docker container.
 
@@ -48,22 +57,12 @@ sudo docker build \
       senzing/hello-world
     ```
 
-## Push to hub.docker.com
+## Run Docker container from DockerHub image
 
-Add / Update docker images on [hub.docker.com/u/senzing](https://hub.docker.com/u/senzing).
-
-1. Push latest
+1. Create the docker container.
 
     ```console
-    sudo docker tag senzing/hello-world senzing/hello-world-on-hub-docker-com
-    sudo docker push senzing/hello-world-on-hub-docker-com
-    ```
-
-1. Push version
-
-    ```console
-    export DOCKER_VERSION=1.0.0
-
-    sudo docker tag senzing/hello-world senzing/hello-world-on-hub-docker-com:${DOCKER_VERSION}
-    sudo docker push senzing/hello-world-on-hub-docker-com:${DOCKER_VERSION}
+    sudo docker run \
+      -it  \
+      senzing/hello-world-on-hub-docker-com
     ```

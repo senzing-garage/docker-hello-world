@@ -21,4 +21,4 @@ ENV SLEEP_TIME=300
 
 # Runtime execution.
 
-CMD ["/app/alpine-sleep-infinity.sh"]
+CMD ["/app/hello-world.sh"]
