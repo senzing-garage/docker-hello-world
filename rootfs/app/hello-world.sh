@@ -15,11 +15,11 @@ trap 'handle_term' TERM
 # Main
 # =============================================================================
 
-echo "Hello world at " $(date)
+echo "Hello world at" $(date)
 
 # Sleep cycle in a manner that allows "docker stop ..." to shutdown gracefully.
 
-while sleep ${SLEEP_TIME:-300};
+while sleep ${SENZING_SLEEP_TIME:-600};
   do
     echo "Hello world at" $(date)
   done &
