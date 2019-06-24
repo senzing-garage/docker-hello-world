@@ -2,7 +2,9 @@
 
 ## Overview
 
-The `senzing/hello-world` docker image prints
+The `senzing/hello-world`
+and [senzing/hello-world-on-hub-docker-com](https://hub.docker.com/r/senzing/hello-world-on-hub-docker-com)
+docker images print:
 
 ```console
 Hello world at Day Mon dd hh:mm:ss UTC yyyy
@@ -10,60 +12,69 @@ Hello world at Day Mon dd hh:mm:ss UTC yyyy
  :
 ```
 
-to STDOUT at an interval defined by `SLEEP_TIME` in seconds.
-Default: 300 seconds (5 minutes).
+to STDOUT at an interval defined by `SENZING_SLEEP_TIME` in seconds.
+Default: 600 seconds (10 minutes).
 
 This minimal docker image is used for testing docker formations in products like
 Docker-compose, Kubernetes, Rancher, etc.
 
+It can be used to compare behavior of local docker registry/repository with DockerHub.
+
+1. `senzing/hello-world`
+   is not on DockerHub.
+   It must be built locally.
+1. `senzing/hello-world-on-hub-docker-com`
+   is on [DockerHub](https://hub.docker.com/r/senzing/hello-world-on-hub-docker-com)
+   and will be pulled automatically.
+
 ### Contents
 
-1. [Create Docker container](#create-docker-container)
-1. [Run Docker container](#run-docker-container)
+1. [Build local docker image](#build-local-docker-image)
+1. [Run Docker container from local image](#run-docker-container-from-local-image)
+1. [Run Docker container from DockerHub image](#run-docker-container-from-dockerhub-image)
 
-## Create docker container
+## Build local docker image
 
-```console
-sudo docker build \
-  --tag senzing/hello-world \
-  https://github.com/senzing/docker-hello-world.git
-```
+1. Build image.
+   Example:
 
-## Run Docker container
+    ```console
+    sudo docker build \
+      --tag senzing/hello-world \
+      https://github.com/senzing/docker-hello-world.git
+    ```
 
-1. Create the docker container.
+## Configuration
+
+* **SENZING_SLEEP_TIME** -
+  Amount of time to sleep, in seconds for `hello-world.sh`.
+  Default: 600 (10 minutes).
+
+## Run Docker container from local image
+
+1. Run the docker container.
+   Example:
 
     ```console
     sudo docker run \
-      -it  \
       senzing/hello-world
     ```
 
-1. Create the docker container.
+1. Run the docker container with `SLEEP_TIME`.
+   Example:
 
     ```console
     sudo docker run \
-      -it  \
-      --env SLEEP_TIME=30 \
+      --env SENZING_SLEEP_TIME=30 \
       senzing/hello-world
     ```
 
-## Push to hub.docker.com
+## Run Docker container from DockerHub image
 
-Add / Update docker images on [hub.docker.com/u/senzing](https://hub.docker.com/u/senzing).
-
-1. Push latest
-
-    ```console
-    sudo docker tag senzing/hello-world senzing/hello-world-on-hub-docker-com
-    sudo docker push senzing/hello-world-on-hub-docker-com
-    ```
-
-1. Push version
+1. Run the docker container.
+   Example:
 
     ```console
-    export DOCKER_VERSION=1.0.0
-
-    sudo docker tag senzing/hello-world senzing/hello-world-on-hub-docker-com:${DOCKER_VERSION}
-    sudo docker push senzing/hello-world-on-hub-docker-com:${DOCKER_VERSION}
+    sudo docker run \
+      senzing/hello-world-on-hub-docker-com
     ```

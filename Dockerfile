@@ -17,8 +17,8 @@ COPY ./rootfs /
 
 RUN apk add --no-cache bash
 
-ENV SLEEP_TIME=300
+ENV SENZING_SLEEP_TIME=600
 
 # Runtime execution.
 
-CMD ["/app/alpine-sleep-infinity.sh"]
+CMD ["/app/hello-world.sh"]
