@@ -2,7 +2,9 @@
 
 ## Overview
 
-The `senzing/hello-world` docker image prints
+The `senzing/hello-world`
+and [senzing/hello-world-on-hub-docker-com](https://hub.docker.com/r/senzing/hello-world-on-hub-docker-com)
+docker images print:
 
 ```console
 Hello world at Day Mon dd hh:mm:ss UTC yyyy
