@@ -3,7 +3,7 @@
 ## Overview
 
 The `senzing/hello-world`
-and `[senzing/hello-world-on-hub-docker-com](https://hub.docker.com/r/senzing/hello-world-on-hub-docker-com)`
+and [senzing/hello-world-on-hub-docker-com](https://hub.docker.com/r/senzing/hello-world-on-hub-docker-com)
 docker images print:
 
 ```console
