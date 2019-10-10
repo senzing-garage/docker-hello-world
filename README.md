@@ -27,6 +27,13 @@ It can be used to compare behavior of local docker registry/repository with Dock
    is on [DockerHub](https://hub.docker.com/r/senzing/hello-world-on-hub-docker-com)
    and will be pulled automatically.
 
+### Related artifacts
+
+1. [DockerHub](https://hub.docker.com/r/senzing/hello-world-on-hub-docker-com)
+1. Helm charts:
+    1. [senzing-hello-world-on-hub-docker-com](https://github.com/Senzing/charts/tree/master/charts/senzing-hello-world-on-hub-docker-com)
+    1. [senzing-hello-world](https://github.com/Senzing/charts/tree/master/charts/senzing-hello-world)
+
 ### Contents
 
 1. [Build local docker image](#build-local-docker-image)
