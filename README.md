@@ -53,9 +53,7 @@ It can be used to compare behavior of local docker registry/repository with Dock
 
 ## Configuration
 
-* **SENZING_SLEEP_TIME** -
-  Amount of time to sleep, in seconds for `hello-world.sh`.
-  Default: 600 (10 minutes).
+- **[SENZING_SLEEP_TIME](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_sleep_time)**  Default: 600 (10 minutes).
 
 ## Run Docker container from local image
 
