@@ -48,7 +48,7 @@ It can be used to compare behavior of local docker registry/repository with Dock
     ```console
     sudo docker build \
       --tag senzing/hello-world \
-      https://github.com/senzing/docker-hello-world.git
+      https://github.com/senzing/docker-hello-world.git#main
     ```
 
 ## Configuration
