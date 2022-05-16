@@ -31,8 +31,8 @@ It can be used to compare behavior of local docker registry/repository with Dock
 
 1. [DockerHub](https://hub.docker.com/r/senzing/hello-world-on-hub-docker-com)
 1. Helm charts:
-    1. [senzing-hello-world-on-hub-docker-com](https://github.com/Senzing/charts/tree/master/charts/senzing-hello-world-on-hub-docker-com)
-    1. [senzing-hello-world](https://github.com/Senzing/charts/tree/master/charts/senzing-hello-world)
+    1. [senzing-hello-world-on-hub-docker-com](https://github.com/Senzing/charts/tree/main/charts/senzing-hello-world-on-hub-docker-com)
+    1. [senzing-hello-world](https://github.com/Senzing/charts/tree/main/charts/senzing-hello-world)
 
 ### Contents
 
@@ -53,7 +53,7 @@ It can be used to compare behavior of local docker registry/repository with Dock
 
 ## Configuration
 
-- **[SENZING_SLEEP_TIME](https://github.com/Senzing/knowledge-base/blob/master/lists/environment-variables.md#senzing_sleep_time)**  Default: 600 (10 minutes).
+- **[SENZING_SLEEP_TIME](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_sleep_time)**  Default: 600 (10 minutes).
 
 ## Run Docker container from local image
 
