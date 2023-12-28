@@ -1,5 +1,17 @@
 # docker-hello-world
 
+If you are beginning your journey with
+[Senzing](https://senzing.com/),
+please start with
+[Senzing Quick Start guides](https://docs.senzing.com/quickstart/).
+
+You are in the
+[Senzing Garage](https://github.com/senzing-garage)
+where projects are "tinkered" on.
+Although this GitHub repository may help you understand an approach to using Senzing,
+it's not considered to be "production ready" and is not considered to be part of the Senzing product.
+Heck, it may not even be appropriate for your application of Senzing!
+
 ## Overview
 
 The `senzing/hello-world`
@@ -31,8 +43,8 @@ It can be used to compare behavior of local docker registry/repository with Dock
 
 1. [DockerHub](https://hub.docker.com/r/senzing/hello-world-on-hub-docker-com)
 1. Helm charts:
-    1. [senzing-hello-world-on-hub-docker-com](https://github.com/Senzing/charts/tree/main/charts/senzing-hello-world-on-hub-docker-com)
-    1. [senzing-hello-world](https://github.com/Senzing/charts/tree/main/charts/senzing-hello-world)
+    1. [senzing-hello-world-on-hub-docker-com](https://github.com/senzing-garage/charts/tree/main/charts/senzing-hello-world-on-hub-docker-com)
+    1. [senzing-hello-world](https://github.com/senzing-garage/charts/tree/main/charts/senzing-hello-world)
 
 ### Contents
 
@@ -48,12 +60,12 @@ It can be used to compare behavior of local docker registry/repository with Dock
     ```console
     sudo docker build \
       --tag senzing/hello-world \
-      https://github.com/senzing/docker-hello-world.git#main
+      https://github.com/senzing-garage/docker-hello-world.git#main
     ```
 
 ## Configuration
 
-- **[SENZING_SLEEP_TIME](https://github.com/Senzing/knowledge-base/blob/main/lists/environment-variables.md#senzing_sleep_time)**  Default: 600 (10 minutes).
+- **[SENZING_SLEEP_TIME](https://github.com/senzing-garage/knowledge-base/blob/main/lists/environment-variables.md#senzing_sleep_time)**  Default: 600 (10 minutes).
 
 ## Run Docker container from local image
 
